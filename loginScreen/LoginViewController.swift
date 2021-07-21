@@ -15,10 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotUserNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
+    private let user = "Andrey"
+    private let password = "Password"
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -26,15 +25,13 @@ class LoginViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcomeName = userNameTF.text!
         if let welcome = userNameTF.text {
             welcomeVC.welcomeName = welcome
         }
     }
 
     @IBAction func loginAction() {
-        if userNameTF.text == "User" && passwordTF.text == "Password" {
-            return
+        if userNameTF.text == user && passwordTF.text == password {
         } else {
             showAlert(title: "Error", message: "All text fields must be filled")
         }
