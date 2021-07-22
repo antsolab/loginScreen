@@ -75,7 +75,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="Jzl-pB-kZc" id="KRF-gI-jfW"/>
                         <outlet property="passwordTF" destination="cDe-rr-xRK" id="Teu-6Q-tvQ"/>
                         <outlet property="userNameTF" destination="GmZ-bU-9aT" id="nsz-Qi-p14"/>
                     </connections>
