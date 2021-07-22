@@ -50,15 +50,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Forgot User Name?"/>
                                                 <connections>
-                                                    <action selector="forgotUserNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSJ-UR-D3K"/>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ifz-Cw-P5O"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-Yb-ejZ">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-Yb-ejZ">
                                                 <rect key="frame" x="211" y="0.0" width="123" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Forgot Password?"/>
                                                 <connections>
-                                                    <action selector="forgotPasswordAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="lmM-Vc-bxJ"/>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKq-lr-dh6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -75,8 +75,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgotPasswordButton" destination="Zf6-Yb-ejZ" id="Icv-pz-wfR"/>
-                        <outlet property="forgotUserNameButton" destination="gSg-rZ-YH8" id="6EL-FD-jaA"/>
                         <outlet property="loginButton" destination="Jzl-pB-kZc" id="KRF-gI-jfW"/>
                         <outlet property="passwordTF" destination="cDe-rr-xRK" id="Teu-6Q-tvQ"/>
                         <outlet property="userNameTF" destination="GmZ-bU-9aT" id="nsz-Qi-p14"/>

@@ -18,10 +18,6 @@ class LoginViewController: UIViewController {
     
     private let user = "Andrey"
     private let password = "Password"
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -31,19 +27,17 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginAction() {
-        if userNameTF.text == user && passwordTF.text == password {
-        } else {
-            showAlert(title: "Error", message: "All text fields must be filled")
+        if userNameTF.text != user || passwordTF.text != password {
+            showAlert(title: "Error", message: "Check your name and password")
         }
+        return
     }
     
-    @IBAction func forgotUserNameAction() {
-        showAlert(title: "Oops!", message: "Your name is: User")
-    }
-    
-    @IBAction func forgotPasswordAction() {
-        showAlert(title: "Oops!", message: "Your password is: Password")
-    }
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your name is \(user)")
+        : showAlert(title: "Oops!", message: "Your password is \(password)")
+}
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         guard let _ = segue.source as? WelcomeViewController else { return }
